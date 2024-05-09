@@ -9219,4 +9219,13 @@ INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,311,23);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,312,18);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,313,0);
 
+
 select * from production.stocks;
+
+EXEC sys.sp_helpindex @objname = N'sales.customers';
+
+SELECT *  FROM sales.customers;
+
+CREATE NONCLUSTERED INDEX abc_IX ON sales.customers(zip_code)
+
+select * from sales.customers where zip_code = '11510'
